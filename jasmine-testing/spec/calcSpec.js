@@ -24,3 +24,50 @@ describe("Calculator", function(){
         });
     });
 });
+
+
+describe("Drink About Game", function(){
+    describe("Error tests", function(){
+        it("should return string: Sorry. I can't tell what drink because that age is incorrect!",function(){
+            expect(drinkAboutGame(-1)).toBe("Sorry. I can't tell what drink because that age is incorrect!");
+        });
+        it("should return string: Sorry. I can't tell what drink because that age is incorrect!",function(){
+            expect(drinkAboutGame(130)).toBe("Sorry. I can't tell what drink because that age is incorrect!");
+        });
+        it("should return string: Sorry. I can't tell what drink because that age is incorrect!",function(){
+            expect(drinkAboutGame("cake")).toBe("Sorry. I can't tell what drink because that age is incorrect!");
+        });
+    });
+    describe("Drink Toddy tests", function(){
+        it("should return string: Drink Toddy", function(){
+            expect(drinkAboutGame(0)).toBe("Drink Toddy");
+        });
+        it("should return string: Drink Toddy", function(){
+            expect(drinkAboutGame(13)).toBe("Drink Toddy");
+        });
+    });
+    describe("Drink Coke tests", function(){
+        it("should return string: Drink Coke", function(){
+            expect(drinkAboutGame(14)).toBe("Drink Coke");
+        });
+        it("should return string: Drink Coke", function(){
+            expect(drinkAboutGame(17)).toBe("Drink Coke");
+        });
+    });
+    describe("Drink Beer tests", function(){
+        it("should return string: Drink Beer", function(){
+            expect(drinkAboutGame(18)).toBe("Drink Beer");
+        });
+        it("should return string: Drink Beer", function(){
+            expect(drinkAboutGame(20)).toBe("Drink Beer");
+        });
+    });
+    describe("Drink Whiskey tests", function(){
+        it("should return string: Drink Whiskey", function(){
+            expect(drinkAboutGame(22)).toBe("Drink Whiskey");
+        });
+        it("should return string: Drink Whiskey", function(){
+            expect(drinkAboutGame(129)).toBe("Drink Whiskey");
+        });
+    });
+});
